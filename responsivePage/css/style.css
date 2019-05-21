@@ -1,0 +1,205 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+ul li{
+	list-style-type: none;
+	display: inline-block;
+}
+html,body{
+	font-size: 0;
+	overflow-x: hidden;
+}
+/*第一区域*/
+header{
+	width: 100%;
+	background-color: #b2c5cc;
+	text-align: center;
+}
+header nav{
+	width: 100%;
+	height: 70px;
+	line-height: 70px;
+	/*background-color: #7ea6b1;*/
+}
+.imoocHead{
+	display: none;
+}
+#nav-list{
+	width: 60%;
+	margin: 0 auto; 
+}
+#nav-list li{
+	width: 20%;
+	font-size: 22px;
+}
+.present-one{
+	color: #efefef;
+}
+#logo img{
+	margin: 80px auto;
+}
+#logo button{
+	width: 140px;
+	height: 45px;
+	background-color: #fff;
+	margin-bottom: 180px;
+}
+/*第二区域*/
+#about{
+	text-align: center;
+	border-bottom: 1px solid #cfcfcf;
+}
+#about ul li{
+	width: 25%;
+	height: 60px;
+	line-height: 60px;
+	font-size: 18px;
+	color: #bababa;
+}
+#about .present-two{
+	color: #545454;
+}
+/*第三区域*/
+#responsive{
+	width: 60%;
+	margin: 70px auto;
+}
+#responsive h3{
+	font-family: '宋体';
+	font-size: 30px;
+	text-align: center;
+	color: #545454;
+	margin-bottom: 30px;
+}
+#responsive p{
+	line-height: 32px;
+	font-size: 16px;
+	color: #bababa;
+}
+/*第四区域*/
+#about-platform{
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	background-color: #f4f4f4;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 18px;
+	padding: 0 50px;
+	overflow: hidden;
+	color: #545454;
+}
+/*第五区域*/
+#course{
+	background: url(../images/bg.jpg) left bottom no-repeat;
+	width: 100%;
+	padding: 30px;
+}
+#course div{
+	font-size: 18px;
+	color: #545454;
+	padding-left:20px;
+}
+#course ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding-bottom: 20px;
+    /*-webkit-column-count: 3; 
+    -moz-column-count: 3; 
+    column-count: 3;*/
+}
+#course ul li{
+	width: 32%;
+	padding :10px;
+	background-size: cover;
+	background-position: center center;
+}
+#course ul li img{
+	width: 100%;
+	height: 100%;
+}
+footer{
+	/*height: 60px;*/
+	line-height: 60px;
+	text-align: center;
+	background-color: #f4f4f4;
+	font-size: 16px;
+}
+
+@media screen and (max-width: 767px){
+/*第一区域*/
+.imoocHead{
+	width: 100%;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	font-size: 22px;
+	position: relative;
+	z-index: 99;
+	background-color: #7ea6b1;
+}
+header #nav-btn{
+	height: 20px;
+	width: 20px;
+	display: inline-block;
+	border: 1px solid #fff;
+	position: absolute;
+	top: 25px;
+	right: 30px;
+	color: #fff;
+	background-color: #7ea6b1;
+}
+#nav-list{
+	width: 100%;
+	top: -10px;
+	position: relative;
+	z-index: 1;
+	height: 0;
+	overflow: hidden;
+}
+#nav-list li{
+	width: 100%;
+	display: block;
+	color: white;
+	font-size: 14px;
+	line-height: 30px;
+	text-align: center;
+	background-color:#7ea6b1;
+	border-top: 1px solid #fff;
+}
+.present-one{
+	color: white;
+}
+
+/*第四区域*/
+#about-platform{
+	width: 100%;
+	height: 120px;
+	background-color: #f4f4f4;
+	display: flex;
+	flex-direction: column;
+	color: #545454;
+	align-items: center;
+}
+#about-platform span{
+	display: block;
+}
+#about-platform span:nth-child(1){
+	font-size: 22px;
+	margin-bottom: -10px;
+}
+/*第五区域*/
+#course ul li{
+	width: 49%
+}
+
+}

@@ -1,2 +1,4 @@
-# choc-ices.github.io
-Git is a distributed version control system.
+
+### 这是我的个人简历，欢迎各位HR来撩哦。：）
+
+继续进阶中... 不忘初心，方得始终。

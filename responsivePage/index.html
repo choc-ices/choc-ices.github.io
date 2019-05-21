@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>响应式</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<!-- 第一区域 -->
+	<header>
+		<nav>
+			<div class="imoocHead">
+				<div>imooc</div>
+				<button id="nav-btn">=</button>
+			</div>
+			<ul id="nav-list">
+				<li class="present-one">首页</li>
+				<li>Java</li>
+				<li>ios</li>
+				<li>Android</li>
+				<li>php</li>
+			</ul>
+		</nav>
+		<section id="logo">
+			<img src="images/1.png">
+			<div>IMOOC</div>
+			<button>start</button>
+		</section>
+	</header>
+	<!-- 第二区域 -->
+	<div id="about">
+		<ul>
+			<li class="present-two">关于平台</li>
+			<li>关于课程</li>
+			<li>团队介绍</li>
+			<li>新增专题</li>
+		</ul>
+	</div>
+	<!-- 第三区域 -->
+	<div id="responsive">
+		<h3>响应式</h3>
+		<p>响应式布局是Ethan Marcotte在2010年5月份提出的一个概念，简而言之，就是一个网站能够兼容多个终端--而不是为每个终端做一个特定的版本。这个概念是为解决移动互联网浏览而诞生的。响应式布局可以为不同终端的用户提供更加舒适的界面和更好的用户体验，而且随着目前大屏幕移动设备的普及，用"大势所趋"来形容也不为过。随着越来越多的设计师采用这个技术，我们不仅看到很多的创新，还看到了一些成形的模式。优点:面对不同分辨率设备灵活性强；能够快捷解决多设备显示适应问题。缺点:兼容各种设备工作量大，效率低下；代码累赘，会出现隐藏无用的元素，加载时间加长；其实这是一种折中性质的设计解决方案，多方面因素影响而达不到最佳效果；一定程度上改变了网站原有的布局结构，会出现用户混淆的情况。</p>
+	</div>
+	<!-- 第四区域 -->
+	<div id="about-platform">
+		<span>IMOOC</span>
+		<span>welcom to <a href="www.imooc.com">www.imooc.com</a></span>
+	</div>
+	<!-- 第五区域 -->
+	<div id="course">
+		<div>主打课程</div>
+		<ul>
+			<li><a href="#"><img src="images/1.jpg"></a></li>
+			<li><a href="#"><img src="images/2.jpg"></a></li>
+			<li><a href="#"><img src="images/3.jpg"></a></li>
+			<li><a href="#"><img src="images/4.jpg"></a></li>
+			<li><a href="#"><img src="images/5.jpg"></a></li>
+			<li><a href="#"><img src="images/6.jpg"></a></li>
+		</ul>
+	</div>
+	<!-- 第六区域 -->
+	<footer>
+		Copyright &copy; 2017 imooc.com All Rights Reserved
+	</footer>
+</body>
+<script type="text/javascript">
+	function menu(){
+		var navList = document.getElementById('nav-list');
+		console.log(navList);
+		var navBtn = document.getElementById('nav-btn');
+		console.log(navBtn);	
+
+		navBtn.onclick = function(){
+			var i = 156;
+			var j = 0;
+			if(!navList.offsetHeight){
+				var idOut = setInterval(frameOut, 5);
+				function frameOut() {
+					if (j == 156) {
+						clearInterval(idOut);
+					} else {
+						j++; 
+						navList.style.height = j + 'px';  
+					}
+					console.log("j==155:" + navList.offsetHeight);
+				}
+			}else {
+				var idIn = setInterval(frameIn, 5);
+				function frameIn() {
+					if (i == 0) {
+						clearInterval(idIn);
+					} else {
+						i--; 
+						navList.style.height = i + 'px';
+					}
+					console.log("i==0:" + navList.offsetHeight);
+				}
+			}
+			console.log("click");
+		}
+		console.log("menu.navList.style.height:",navList.offsetHeight);
+	} 
+
+	menu();
+
+</script>
+</html>
